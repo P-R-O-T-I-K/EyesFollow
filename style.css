@@ -1,6 +1,7 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 .text{
     position: absolute;
@@ -21,24 +22,43 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    background: #ffcd00;
     box-shadow: 0 5px 45px rgba(0,0,0,0.2),
-                inset 0 0 15px #ff105e,
-                inset 0 0 25px #ff105e;
+                inset 0 0 15px yellow,
+                inset 0 0 25px yellow;
     height: 350px;
     border-radius: 50%;
-
+}
+.box::before{
+    content: "";
+    position: absolute;
+    bottom: 180px;
+    width: 210px;
+    height: 100px;
+    background: #b57700;
+    border-bottom-left-radius: 140px;
+    border-bottom-right-radius: 140px;
+    transition: 0.5s;
+}
+.box:hover::before{
+    position: absolute;
+    bottom: 250px;
+    height: 20px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
 .box .eye{
     position: relative;
+    top: -40px;
     width: 120px;
     height:120px;
-    display: block;
+    display: inline-block;
     background-color: white;
     margin: 0 30px;
     border-radius: 50%;
     box-shadow: 0 5px 45px rgba(0,0,0,0.2),
-                inset 0 0 15px #ff105e,
-                inset 0 0 25px #ff105e;
+                inset 0 0 15px yellow,
+                inset 0 0 25px yellow;
 }
 .box .eye::before{
     content: "";
